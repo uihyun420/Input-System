@@ -28,7 +28,7 @@ public class CubeTest : MonoBehaviour
         cubeRotate = context.ReadValue<Vector2>();
     }
 
-    public void OnChangeColor(InputAction.CallbackContext context)
+    public void OnChangeColor(InputAction.CallbackContext context) // 액션은 버튼 하나마다 하기
     {
         if (Gamepad.current.buttonSouth.wasPressedThisFrame)
             cubeColor = Color.red;
@@ -67,7 +67,6 @@ public class CubeTest : MonoBehaviour
     {
         defaultColor = GetComponent<Renderer>().material.color;
     }
-
 
     private void ChangeColor(Color color)
     {
